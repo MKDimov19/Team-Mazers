@@ -30,6 +30,7 @@ void Options(int choise)
 	else
 	{
 		cout << "incorrect input. Try again" << endl;
+		cin >> choise;
 		Options(choise);
 	}
 }
