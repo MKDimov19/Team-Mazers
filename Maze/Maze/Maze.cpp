@@ -7,31 +7,36 @@ bool isPlaying = true;
 
 void Menu()
 {
+	cout << " _______                             __  __                                   " << endl;
+	cout << "|__   __|                           |  \\/  |                                  " << endl;
+	cout << "   | |  ___    __ _   _ __ ___      | \\  / |   __ _   ____   ___   _ __   ___ " << endl;
+	cout << "   | | / _ \\  / _` | | '_ ` _ \      | |\\/| |  / _` | |_  /  / _ \\ | '__| / __|" << endl;
+	cout << "   | ||  __/ | (_| | | | | | | |    | |  | | | (_| |  / /  |  __/ | |    \\__ \\ " << endl;
+	cout << "   |_| \\___|  \\__,_| |_| |_| |_|    |_|  |_|  \\__,_| /___|  \\___| |_|    |___/" << endl;
+
+	cout << endl;
+
 	cout << "1. Play" << endl;
 	cout << "2. Rules" << endl;
 	cout << "3. Information" << endl;
 }
 
-void Options(int choise)
+void Options(int choice)
 {
-	if (choise == 1)
-	{
+	switch (choice) {
+	case 1:
 		cout << "You are playing a game" << endl;
-		
-	}
-	else if (choise == 2)
-	{
-		cout << "Those are the rules" << endl;
-	}
-	else if (choise == 3)
-	{
-		cout << "information" << endl;
-	}
-	else
-	{
-		cout << "incorrect input. Try again" << endl;
-		cin >> choise;
-		Options(choise);
+		break;
+	case 2:
+		cout << "Those are the rules: " << endl;
+		break;
+	case 3:
+		cout << "Information" << endl;
+	default:
+		cout << "Incorrect input. Try again!";
+		cin >> choice;
+		Options(choice);
+		break;
 	}
 }
 
@@ -44,18 +49,19 @@ void StopPlaying(string answer)
 	{
 		isPlaying = false;
 	}
+	system("CLS");
 }
 
 int main()
 {
 	int n;
-	string choise;
+	string choice;
 	for (;isPlaying;)
 	{
 		Menu();	
 		cin >> n;
 		Options(n);
-		StopPlaying(choise);
+		StopPlaying(choice);
 	}
 
 }
