@@ -21,6 +21,8 @@ void Menu()
 	cout << "3. Information" << endl;
 }
 
+
+
 void Options(int choice)
 {
 	switch (choice) {
@@ -31,7 +33,11 @@ void Options(int choice)
 		cout << "Those are the rules: " << endl;
 		break;
 	case 3:
-		cout << "Information" << endl;
+		cout << "Georgi Trendafilov - front-end" << endl;
+		cout << "Georgi Ivanov - QA" << endl;
+		cout << "Maksimilian - scrum trainer" << endl;
+		cout << "Georgi Hrisimov - back-end" << endl;
+		break;
 	default:
 		cout << "Incorrect input. Try again!";
 		cin >> choice;
