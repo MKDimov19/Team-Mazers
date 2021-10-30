@@ -21,6 +21,13 @@ void Menu()
 	cout << "3. Information" << endl;
 }
 
+void info()
+{
+	cout << "Georgi Trendafilov - front-end" << endl;
+	cout << "Georgi Ivanov - QA" << endl;
+	cout << "Maksimilian - scrum trainer" << endl;
+	cout << "Georgi Hrisimov - back-end" << endl;
+}
 
 
 void Options(int choice)
@@ -33,10 +40,7 @@ void Options(int choice)
 		cout << "Those are the rules: " << endl;
 		break;
 	case 3:
-		cout << "Georgi Trendafilov - front-end" << endl;
-		cout << "Georgi Ivanov - QA" << endl;
-		cout << "Maksimilian - scrum trainer" << endl;
-		cout << "Georgi Hrisimov - back-end" << endl;
+		info();
 		break;
 	default:
 		cout << "Incorrect input. Try again!";
@@ -62,9 +66,9 @@ int main()
 {
 	int n;
 	string choice;
-	for (;isPlaying;)
+	for (; isPlaying;)
 	{
-		Menu();	
+		Menu();
 		cin >> n;
 		Options(n);
 		StopPlaying(choice);
