@@ -29,6 +29,10 @@ void info()
 	cout << "Georgi Hrisimov - back-end" << endl;
 }
 
+void rules()
+{
+	cout << "Rules" << endl;
+}
 
 void Options(int choice)
 {
@@ -37,11 +41,12 @@ void Options(int choice)
 		cout << "You are playing a game" << endl;
 		break;
 	case 2:
-		cout << "Those are the rules: " << endl;
+		rules();
 		break;
 	case 3:
 		info();
 		break;
+
 	default:
 		cout << "Incorrect input. Try again!";
 		cin >> choice;
@@ -59,6 +64,16 @@ void StopPlaying(string answer)
 	{
 		isPlaying = false;
 	}
+	else if (answer == "No" or answer == "no")
+	{
+		cout << "ok";
+	}
+	else
+	{
+		cout << "Incorrect input" << endl;
+		StopPlaying(answer);
+		cin >> answer;
+	}
 	system("CLS");
 }
 
@@ -66,7 +81,7 @@ int main()
 {
 	int n;
 	string choice;
-	for (; isPlaying;)
+	for (;isPlaying;)
 	{
 		Menu();
 		cin >> n;
