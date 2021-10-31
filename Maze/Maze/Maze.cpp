@@ -14,8 +14,6 @@ int main()
 		Menu();
 		cin >> n;
 		Options(n);
-
 	}
-
 }
 
