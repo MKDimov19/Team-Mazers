@@ -10,9 +10,11 @@ void maze() {
 
 	for (int i = 0; i < size; i++) {
 		for (int j = 0; j < size; j++) {
-			maze[i][j] = '#';
+			maze[i][j] = char(254);
 		}
 	}
+
+
 
 	for (int i = 0; i < size; i++) {
 		for (int j = 0; j < size; j++) {
@@ -20,4 +22,5 @@ void maze() {
 		}
 		cout << endl;
 	}
+
 }

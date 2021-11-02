@@ -20,7 +20,7 @@ void Options()
 	{
 		key = _getch();
 
-		if (key == KEY_UP && (counter >= 2 && counter <= 3)) {
+		if (key == KEY_UP && (counter >= 2 && counter <= 4)) {
 			system("CLS");
 			Menu();
 			counter--;
@@ -28,7 +28,7 @@ void Options()
 			cout << "Current selection " << counter << endl;
 		}
 
-		if (key == KEY_DOWN && (counter >= 1 && counter <= 2)) {
+		if (key == KEY_DOWN && (counter >= 1 && counter <= 3)) {
 			system("CLS");
 			Menu();
 			counter++;
@@ -62,6 +62,11 @@ void Options()
 				GoBack();
 				break;
 			}
+
+			else if (counter == 4) {
+				system("CLS");
+				exit(0);
+			}
 		}
 	}
 }
@@ -80,6 +85,7 @@ void Menu() {
 	cout << "1. Play" << endl;
 	cout << "2. Rules" << endl;
 	cout << "3. Information" << endl;
+	cout << "4. Exit" << endl;
 }
 
 void info()
