@@ -1,6 +1,8 @@
 #include <iostream>
 #include <conio.h>
+#include <windows.h>
 #include "Menu.h"
+#include "Maze.h"
 using namespace std;
 
 #define KEY_UP 72
@@ -11,22 +13,27 @@ using namespace std;
 int counter = 1;
 void Options()
 {
+	cout << endl;
+	cout << "Current selection " << counter << endl;
 	char key;
 	for (int i = 0;;)
 	{
-
 		key = _getch();
 
 		if (key == KEY_UP && (counter >= 2 && counter <= 3)) {
 			system("CLS");
 			Menu();
 			counter--;
+			cout << endl;
+			cout << "Current selection " << counter << endl;
 		}
 
 		if (key == KEY_DOWN && (counter >= 1 && counter <= 2)) {
 			system("CLS");
 			Menu();
 			counter++;
+			cout << endl;
+			cout << "Current selection " << counter << endl;
 		}
 
 
@@ -36,6 +43,8 @@ void Options()
 			if (counter == 1) {
 				system("CLS");
 				cout << "You are playing a game" << endl;
+				maze();
+				system("PAUSE");
 				GoBack();
 				break;
 			}
@@ -58,8 +67,7 @@ void Options()
 }
 
 
-void Menu()
-{
+void Menu() {
 	system("CLS");
 	cout << " _______                             __  __                                   " << endl;
 	cout << "|__   __|                           |  \\/  |                                  " << endl;
@@ -69,25 +77,9 @@ void Menu()
 	cout << "   |_|  \\___|  \\__,_| |_| |_| |_|   |_|  |_|  \\__,_| /___|  \\___| |_|    |___/" << endl;
 
 	cout << endl;
-	if (counter == 1) {
-		cout << "1. Play <-" << endl;
-	}
-	else {
-		cout << "1. Play" << endl;
-	}
-	if (counter == 2) {
-		cout << "2. Rules <-" << endl;
-	}
-	else {
-		cout << "2. Rules" << endl;
-	}
-	if (counter == 3) {
-		cout << "3. Information <-" << endl;
-	}
-	else {
-		cout << "3. Information" << endl;
-	}
-	
+	cout << "1. Play" << endl;
+	cout << "2. Rules" << endl;
+	cout << "3. Information" << endl;
 }
 
 void info()
@@ -121,7 +113,9 @@ void GoBack()
 	else if (choice == "No" or choice == "no")
 	{
 		cout << "You go there anyway!" << endl;
-
+		Sleep(1000);
+		Menu();
+		Options();
 	}
 	else
 	{
@@ -145,9 +139,4 @@ void GoBack()
 		}
 		if (save == "No" or save == "no") cout << "You go there anyway!" << endl;
 	}
-
 }
-
-
-
-
