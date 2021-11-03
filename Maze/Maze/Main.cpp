@@ -7,7 +7,7 @@ using namespace std;
 int main()
 {
 	system("title Maze");
-	Menu();
-	Options();
+	menu();
+	options();
 }
 

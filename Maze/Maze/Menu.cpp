@@ -3,16 +3,13 @@
 #include <windows.h>
 #include "Menu.h"
 #include "Maze.h"
+
 using namespace std;
 
-#define KEY_UP 72
-#define KEY_DOWN 80
-#define KEY_LEFT 75
-#define KEY_RIGHT 77
-
 int counter = 1;
-void Options()
+void options()
 {
+	Maze reference;
 	cout << endl;
 	cout << "Current selection " << counter << endl;
 	char key;
@@ -22,7 +19,7 @@ void Options()
 
 		if (key == KEY_UP && (counter >= 2 && counter <= 4)) {
 			system("CLS");
-			Menu();
+			menu();
 			counter--;
 			cout << endl;
 			cout << "Current selection " << counter << endl;
@@ -30,7 +27,7 @@ void Options()
 
 		if (key == KEY_DOWN && (counter >= 1 && counter <= 3)) {
 			system("CLS");
-			Menu();
+			menu();
 			counter++;
 			cout << endl;
 			cout << "Current selection " << counter << endl;
@@ -43,28 +40,31 @@ void Options()
 			if (counter == 1) {
 				system("CLS");
 				cout << "You are playing a game" << endl;
-				maze();
+				int size;
+				cin >> size;
+				reference.maze(size);
 				system("PAUSE");
-				GoBack();
+				goback();
 				break;
 			}
 
 			else if (counter == 2) {
 				system("CLS");
 				rules();
-				GoBack();
+				goback();
 				break;
 			}
 
 			else if (counter == 3) {
 				system("CLS");
 				info();
-				GoBack();
+				goback();
 				break;
 			}
 
 			else if (counter == 4) {
 				system("CLS");
+				cout << "Exited the program successfully." << endl;
 				exit(0);
 			}
 		}
@@ -72,7 +72,7 @@ void Options()
 }
 
 
-void Menu() {
+void menu() {
 	system("CLS");
 	cout << " _______                             __  __                                   " << endl;
 	cout << "|__   __|                           |  \\/  |                                  " << endl;
@@ -103,7 +103,7 @@ void rules()
 	cout << "Rules" << endl;
 }
 
-void GoBack()
+void goback()
 {
 	string choice;
 	cout << "Do you want to return to the menu?" << endl;
@@ -113,15 +113,15 @@ void GoBack()
 	if (choice == "yes" or choice == "Yes")
 	{
 		system("CLS");
-		Menu();
-		Options();
+		menu();
+		options();
 	}
 	else if (choice == "No" or choice == "no")
 	{
 		cout << "You go there anyway!" << endl;
 		Sleep(1000);
-		Menu();
-		Options();
+		menu();
+		options();
 	}
 	else
 	{

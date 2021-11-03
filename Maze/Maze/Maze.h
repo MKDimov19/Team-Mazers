@@ -1,2 +1,5 @@
 #pragma once
-void maze();
+class Maze {
+public:
+	void maze(int size);
+};

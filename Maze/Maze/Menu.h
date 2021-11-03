@@ -1,6 +1,11 @@
 #pragma once
-void Menu();
+void menu();
 void info();
 void rules();
-void GoBack();
-void Options();
+void goback();
+void options();
+
+#define KEY_UP 72
+#define KEY_DOWN 80
+#define KEY_LEFT 75
+#define KEY_RIGHT 77
