@@ -40,9 +40,10 @@ void options()
 			if (counter == 1) {
 				system("CLS");
 				cout << "You are playing a game" << endl;
-				int size;
-				cin >> size;
-				reference.maze(size);
+				
+				reference.input();
+				reference.generatemaze();
+				reference.movement();
 				system("PAUSE");
 				goback();
 				break;

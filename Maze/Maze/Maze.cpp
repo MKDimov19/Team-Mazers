@@ -4,43 +4,55 @@
 #include "Maze.h"
 using namespace std;
 
-struct Player {
-	int x;
-	int y;
-	char player;
-};
-
-
-
 
 char** maze1;
-void Maze::maze(int size) {
-	size *= 2 + 1;
-	int r = rand() % size;
-	maze1 = new char* [size];
-	for (int i = 0; i < size; i++) {
-		maze1[i] = new char[size];
+int size1;
+Player player = { 1, 1, char(43) };
+
+void Maze::input() {
+	cin >> size1;
+}
+
+void Maze::generatemaze() {
+	size1 *= 2 + 1;
+	maze1 = new char* [size1];
+	for (int i = 0; i < size1; i++) {
+		maze1[i] = new char[size1];
 	}
 
-	for (int i = 0; i < size; i++) {
-		for (int j = 0; j < size; j++) {
+	for (int i = 0; i < size1; i++) {
+		for (int j = 0; j < size1; j++) {
 			maze1[i][j] = char(254);
 		}
 	}
+}
 
-	for (int i = 0; i < size; i++) {
-		for (int j = 0; j < size; j++) {
-			maze1[r][r] = ' ';
-		}
-	}
-
-	for (int i = 0; i < size; i++) {
-		for (int j = 0; j < size; j++) {
+void Maze::displaymaze() {
+	for (int i = 0; i < size1; i++) {
+		for (int j = 0; j < size1; j++) {
 			cout << maze1[i][j] << " ";
 		}
 		cout << endl;
 	}
 }
+
+void Maze::movement() {
+	for (int i = 0;;) {
+		system("CLS");
+		displaymaze();
+		switch (_getch()) {
+		case KEY_RIGHT:
+			player.x++;
+		case KEY_UP:
+			player.y--;
+		case KEY_DOWN:
+			player.y++;
+		case KEY_LEFT:
+			player.x--;
+		}
+	}
+}
+
 
 
 
