@@ -5,19 +5,19 @@
 using namespace std;
 
 const char WIDTH = 8, HEIGHT = 8;
-Player player{ 1, 1, char(158) };
+Player player{ 1, 1, char(248) };
 
 char action;
 
 unsigned char maze1[WIDTH][HEIGHT] = {
-    '#', '#', '#', '#', '#', '#','#', '#',
-    '#', ' ', ' ', '#', ' ', ' ',' ', '#',
-    '#', '#', ' ', '#', ' ', '#',' ', '#',
-    '#', ' ', ' ', '#', '#', '#',' ', '#',
-    '#', ' ', '#', '#', '#', ' ',' ', '#',
-    '#', ' ', '#', ' ', ' ', ' ','#', '#',
-    '#', ' ', ' ', ' ', '#', ' ',' ', '#',
-    '#', '#', '#', '#', '#', '#',' ', '#',
+    unsigned char(254), unsigned char(254), unsigned char(254), unsigned char(254), unsigned char(254), unsigned char(254),unsigned char(254), unsigned char(254),
+    unsigned char(254), ' ', ' ', unsigned char(254), ' ', ' ',' ', unsigned char(254),
+    unsigned char(254), unsigned char(254), ' ', unsigned char(254), ' ', unsigned char(254),' ', unsigned char(254),
+    unsigned char(254), ' ', ' ', unsigned char(254), unsigned char(254), unsigned char(254),' ', unsigned char(254),
+    unsigned char(254), ' ', unsigned char(254), unsigned char(254), unsigned char(254), ' ',' ', unsigned char(254),
+    unsigned char(254), ' ', unsigned char(254), ' ', ' ', ' ',unsigned char(254), unsigned char(254),
+    unsigned char(254), ' ', ' ', ' ', unsigned char(254), ' ',' ', unsigned char(254),
+    unsigned char(254), unsigned char(254), unsigned char(254), unsigned char(254), unsigned char(254), unsigned char(254),' ', unsigned char(254),
 };
 
 unsigned char currentMaze[WIDTH][HEIGHT];
@@ -25,17 +25,17 @@ unsigned char currentMaze[WIDTH][HEIGHT];
 void Maze::updateMap()
 {
     for (int i = 0; i < HEIGHT; i++) {
-        for (int u = 0; u < WIDTH; u++) {
-            currentMaze[u][i] = maze1[u][i];
+        for (int j = 0; j < WIDTH; j++) {
+            currentMaze[j][i] = maze1[j][i];
         }
     }
     currentMaze[player.x][player.y] = player.player;
 
     for (int i = 0; i < HEIGHT; i++) {
-        cout << endl;
-        for (int u = 0; u < WIDTH; u++) {
-            cout << currentMaze[u][i] << " ";
+        for (int j = 0; j < WIDTH; j++) {
+            cout << currentMaze[j][i] << " ";
         }
+        cout << endl;
     }
     if (currentMaze[player.x][player.y] == currentMaze[7][6]) {
         system("CLS");
@@ -56,25 +56,25 @@ void Maze::movement() {
         switch (action) {
 
         case KEY_DOWN:
-            if (currentMaze[player.x][player.y + 1] != '#') {
+            if (currentMaze[player.x][player.y + 1] != unsigned char(254)) {
                 player.y++;
             }
             break;
 
         case KEY_UP:
-            if (currentMaze[player.x][player.y - 1] != '#') {
+            if (currentMaze[player.x][player.y - 1] != unsigned char(254)) {
                 player.y--;
             }
             break;
 
         case KEY_LEFT:
-            if (currentMaze[player.x - 1][player.y] != '#') {
+            if (currentMaze[player.x - 1][player.y] != unsigned char(254)) {
                 player.x--;
             }
             break;
 
         case KEY_RIGHT:
-            if (currentMaze[player.x + 1][player.y] != '#') {
+            if (currentMaze[player.x + 1][player.y] != unsigned char(254)) {
                 player.x++;
             }
             break;
@@ -100,14 +100,14 @@ void Maze::movement() {
 //#define HEIGHT 8
 //
 //unsigned char map1[WIDTH][HEIGHT] = {
-//	'#', '#', '#', '#', '#', '#','#', '#',
-//	'#', ' ', ' ', '#', ' ', ' ',' ', '#',
-//	'#', '#', ' ', '#', ' ', '#',' ', '#',
-//	'#', ' ', ' ', '#', '#', '#',' ', '#',
-//	'#', ' ', '#', '#', '#', ' ',' ', '#',
-//	'#', ' ', '#', ' ', ' ', ' ','#', '#',
-//	'#', ' ', ' ', ' ', '#', ' ',' ', '#',
-//	'#', '#', '#', '#', '#', '#','#', '#',
+//	unsigned char(254), unsigned char(254), unsigned char(254), unsigned char(254), unsigned char(254), unsigned char(254),unsigned char(254), unsigned char(254),
+//	unsigned char(254), ' ', ' ', unsigned char(254), ' ', ' ',' ', unsigned char(254),
+//	unsigned char(254), unsigned char(254), ' ', unsigned char(254), ' ', unsigned char(254),' ', unsigned char(254),
+//	unsigned char(254), ' ', ' ', unsigned char(254), unsigned char(254), unsigned char(254),' ', unsigned char(254),
+//	unsigned char(254), ' ', unsigned char(254), unsigned char(254), unsigned char(254), ' ',' ', unsigned char(254),
+//	unsigned char(254), ' ', unsigned char(254), ' ', ' ', ' ',unsigned char(254), unsigned char(254),
+//	unsigned char(254), ' ', ' ', ' ', unsigned char(254), ' ',' ', unsigned char(254),
+//	unsigned char(254), unsigned char(254), unsigned char(254), unsigned char(254), unsigned char(254), unsigned char(254),unsigned char(254), unsigned char(254),
 //};
 //
 //
@@ -129,7 +129,7 @@ void Maze::movement() {
 ////
 ////	for (int i = 0; i < size1; i++) {
 ////		for (int j = 0; j < size1; j++) {
-////			maze1[i][j] = char(254);
+////			maze1[i][j] = unsigned char(254);
 ////		}
 ////	}
 ////}
@@ -155,19 +155,19 @@ void Maze::movement() {
 //		char key = _getch();
 //		switch (key) {
 //		case KEY_RIGHT:
-//			if (maze1[playerx + 1][playery] != '#') {
+//			if (maze1[playerx + 1][playery] != unsigned char(254)) {
 //				playerx++;
 //			}
 //		case KEY_UP:
-//			if (maze1[playerx][playery - 1] != '#') {
+//			if (maze1[playerx][playery - 1] != unsigned char(254)) {
 //				playery--;
 //			}
 //		case KEY_DOWN:
-//			if (maze1[playerx][playery + 1] != '#') {
+//			if (maze1[playerx][playery + 1] != unsigned char(254)) {
 //				playery++;
 //			}
 //		case KEY_LEFT:
-//			if (maze1[playerx - 1][playery] != '#') {
+//			if (maze1[playerx - 1][playery] != unsigned char(254)) {
 //				playerx--;
 //			}
 //		}
