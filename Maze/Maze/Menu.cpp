@@ -41,8 +41,8 @@ void options()
 				system("CLS");
 				cout << "You are playing a game" << endl;
 				
-				reference.input();
-				reference.generatemaze();
+				/*reference.input();
+				reference.generatemaze();*/
 				reference.movement();
 				system("PAUSE");
 				goback();

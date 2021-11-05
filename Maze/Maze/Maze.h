@@ -1,10 +1,8 @@
 #pragma once
 class Maze {
 public:
-	void generatemaze();
 	void movement();
-	void input();
-	void displaymaze();
+	void updateMap();
 };
 
 struct Player {
