@@ -7,8 +7,7 @@
 using namespace std;
 
 int counter = 1;
-void options()
-{
+void options() {
 	Maze reference;
 	cout << endl;
 	cout << "Current selection " << counter << endl;
@@ -40,12 +39,7 @@ void options()
 			if (counter == 1) {
 				system("CLS");
 				cout << "You are playing a game" << endl;
-				
-				/*reference.input();
-				reference.generatemaze();*/
 				reference.movement();
-				system("PAUSE");
-				goback();
 				break;
 			}
 
@@ -89,8 +83,7 @@ void menu() {
 	cout << "4. Exit" << endl;
 }
 
-void info()
-{
+void info() {
 	system("CLS");
 	cout << "Georgi Trendafilov - front-end" << endl;
 	cout << "Georgi Ivanov - QA" << endl;
@@ -99,13 +92,11 @@ void info()
 	cout << endl;
 }
 
-void rules()
-{
+void rules() {
 	cout << "Rules" << endl;
 }
 
-void goback()
-{
+void goback() {
 	string choice;
 	cout << "Do you want to return to the menu?" << endl;
 	cout << "Yes/No" << endl;

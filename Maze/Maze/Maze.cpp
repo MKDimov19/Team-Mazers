@@ -6,7 +6,6 @@ using namespace std;
 
 const char WIDTH = 8, HEIGHT = 8;
 Player player{ 1, 1, char(248) };
-
 char action;
 
 unsigned char maze1[WIDTH][HEIGHT] = {
@@ -47,8 +46,6 @@ void Maze::updateMap()
 }
 
 void Maze::movement() {
-    
-
     for (;;) {
         system("CLS");
         Maze::updateMap();
