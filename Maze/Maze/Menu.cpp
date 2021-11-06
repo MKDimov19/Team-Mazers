@@ -80,7 +80,8 @@ void menu() {
 	cout << "1. Play" << endl;
 	cout << "2. Rules" << endl;
 	cout << "3. Information" << endl;
-	cout << "4. Exit" << endl;
+	cout << "4. Exit" << endl << endl;
+	cout << "You can navigate using the arrow keys" << endl;
 }
 
 void info() {
