@@ -23,6 +23,7 @@ unsigned char currentMaze[WIDTH][HEIGHT];
 
 void Maze::updateMap()
 {
+    cout << "You are playing the tutorial" "\n" "\n";
     for (int i = 0; i < HEIGHT; i++) {
         for (int j = 0; j < WIDTH; j++) {
             currentMaze[j][i] = maze1[j][i];
@@ -50,6 +51,9 @@ void Maze::updateMap()
         player.y = 1;
         goback();
     }
+
+    cout << "\n" "# - Trap" "\n" << endl;
+    cout << char(248) << " - Your character" "\n";
 }
 
 void Maze::movement() {

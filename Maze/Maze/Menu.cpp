@@ -42,7 +42,6 @@ void options() {
 			}
 
 			else if (counter == 2) {
-				counter = 1;
 				system("CLS");
 				rules();
 				goback();
@@ -50,7 +49,6 @@ void options() {
 			}
 
 			else if (counter == 3) {
-				counter = 1;
 				system("CLS");
 				info();
 				goback();
@@ -58,7 +56,6 @@ void options() {
 			}
 
 			else if (counter == 4) {
-				counter = 1;
 				system("CLS");
 				cout << "Exited the program successfully." << endl;
 				exit(0);
@@ -103,7 +100,6 @@ void gameOptions() {
 			if (counter == 1) {
 				system("CLS");
 				gameOptions();
-				
 				break;
 			}
 
@@ -116,15 +112,14 @@ void gameOptions() {
 
 			else if (counter == 3) {
 				system("CLS");
-				cout << "You are playing the tutorial" << endl;
 				reference.movement();
 				goback();
+				counter = 1;
 				break;
 			}
 
 			else if (counter == 4) {
 				system("CLS");
-				cout << "Exited the program successfully." << endl;
 				menu();
 				options();
 			}
@@ -133,7 +128,7 @@ void gameOptions() {
 
 }
 
-void gameOptionsMenu(){
+void gameOptionsMenu() {
 	system("CLS");
 	cout << "Game options" << endl << endl;
 
@@ -142,7 +137,6 @@ void gameOptionsMenu(){
 	cout << "3. Tutorial" << endl;
 	cout << "4. Go back to the menu" << endl << endl;
 	cout << "You can navigate using the arrow keys" << endl;
-
 }
 
 
