@@ -71,13 +71,7 @@ void options() {
 
 void gameOptions() {
 
-	cout << "Game options" << endl << endl;
-
-	cout << "1. Levels" << endl;
-	cout << "2. Random generated maze" << endl;
-	cout << "3. Tutorial" << endl;
-	cout << "4. Exit" << endl << endl;
-	cout << "You can navigate using the arrow keys" << endl;
+	gameOptionsMenu();
 
 	Maze reference;
 	cout << endl;
@@ -122,6 +116,7 @@ void gameOptions() {
 
 			else if (counter == 3) {
 				system("CLS");
+				cout << "You are playing the tutorial" << endl;
 				reference.movement();
 				goback();
 				break;
@@ -130,7 +125,8 @@ void gameOptions() {
 			else if (counter == 4) {
 				system("CLS");
 				cout << "Exited the program successfully." << endl;
-				exit(0);
+				menu();
+				options();
 			}
 		}
 	}
@@ -144,7 +140,7 @@ void gameOptionsMenu(){
 	cout << "1. Levels" << endl;
 	cout << "2. Random generated maze" << endl;
 	cout << "3. Tutorial" << endl;
-	cout << "4. Exit" << endl << endl;
+	cout << "4. Go back to the menu" << endl << endl;
 	cout << "You can navigate using the arrow keys" << endl;
 
 }
