@@ -10,7 +10,7 @@ char action;
 
 unsigned char maze1[WIDTH][HEIGHT] = {
     unsigned char(254), unsigned char(254), unsigned char(254), unsigned char(254), unsigned char(254), unsigned char(254),unsigned char(254), unsigned char(254),
-    unsigned char(254), ' ', ' ', unsigned char(254), ' ', ' ',' ', unsigned char(254),
+    unsigned char(254), ' ', ' ', '#', ' ', ' ',' ', unsigned char(254),
     unsigned char(254), unsigned char(254), ' ', unsigned char(254), ' ', unsigned char(254),' ', unsigned char(254),
     unsigned char(254), ' ', ' ', unsigned char(254), unsigned char(254), unsigned char(254),' ', unsigned char(254),
     unsigned char(254), ' ', unsigned char(254), unsigned char(254), unsigned char(254), ' ',' ', unsigned char(254),
@@ -35,6 +35,13 @@ void Maze::updateMap()
             cout << currentMaze[j][i] << " ";
         }
         cout << endl;
+    }
+    if (currentMaze[player.x][player.y] == currentMaze[1][3]) {
+        system("CLS");
+        cout << "You lost!" "\n";
+        player.x = 1;
+        player.y = 1;
+        goback();
     }
     if (currentMaze[player.x][player.y] == currentMaze[7][6]) {
         system("CLS");
