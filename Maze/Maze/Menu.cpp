@@ -7,8 +7,7 @@
 using namespace std;
 
 int counter = 1;
-void options() {
-	Maze reference;
+void options() {	
 	cout << endl;
 	cout << "Current selection " << counter << endl;
 	char key;
@@ -34,12 +33,83 @@ void options() {
 
 
 
+		if (key == '\r') {
+			if (counter == 1) {
+				system("CLS");
+				gameOptions();
+				//reference.movement();
+				break;
+			}
+
+			else if (counter == 2) {
+				counter = 1;
+				system("CLS");
+				rules();
+				goback();
+				break;
+			}
+
+			else if (counter == 3) {
+				counter = 1;
+				system("CLS");
+				info();
+				goback();
+				break;
+			}
+
+			else if (counter == 4) {
+				counter = 1;
+				system("CLS");
+				cout << "Exited the program successfully." << endl;
+				exit(0);
+			}
+		}
+	}
+}
+
+//new
+
+void gameOptions() {
+
+	cout << "Game options" << endl << endl;
+
+	cout << "1. Levels" << endl;
+	cout << "2. Random generated maze" << endl;
+	cout << "3. Tutorial" << endl;
+	cout << "4. Exit" << endl << endl;
+	cout << "You can navigate using the arrow keys" << endl;
+
+	Maze reference;
+	cout << endl;
+	cout << "Current selection " << counter << endl;
+	char key;
+	for (int i = 0;;)
+	{
+		key = _getch();
+
+		if (key == KEY_UP && (counter >= 2 && counter <= 4)) {
+			system("CLS");
+			gameOptionsMenu();
+			counter--;
+			cout << endl;
+			cout << "Current selection " << counter << endl;
+		}
+
+		if (key == KEY_DOWN && (counter >= 1 && counter <= 3)) {
+			system("CLS");
+			gameOptionsMenu();
+			counter++;
+			cout << endl;
+			cout << "Current selection " << counter << endl;
+		}
+
+
 
 		if (key == '\r') {
 			if (counter == 1) {
 				system("CLS");
-				cout << "You are playing a game" << endl;
-				reference.movement();
+				gameOptions();
+				
 				break;
 			}
 
@@ -52,7 +122,7 @@ void options() {
 
 			else if (counter == 3) {
 				system("CLS");
-				info();
+				reference.movement();
 				goback();
 				break;
 			}
@@ -64,6 +134,19 @@ void options() {
 			}
 		}
 	}
+
+}
+
+void gameOptionsMenu(){
+	system("CLS");
+	cout << "Game options" << endl << endl;
+
+	cout << "1. Levels" << endl;
+	cout << "2. Random generated maze" << endl;
+	cout << "3. Tutorial" << endl;
+	cout << "4. Exit" << endl << endl;
+	cout << "You can navigate using the arrow keys" << endl;
+
 }
 
 
@@ -74,9 +157,8 @@ void menu() {
 	cout << "   | |   ___    __ _   _ __ ___     | \\  / |   __ _   ____   ___   _ __   ___ " << endl;
 	cout << "   | |  / _ \\  / _` | | '_ ` _` \\   | |\\/| |  / _` | |_  /  / _ \\ | '__| / __|" << endl;
 	cout << "   | | |  __/ | (_| | | | | | | |   | |  | | | (_| |  / /  |  __/ | |    \\__ \\ " << endl;
-	cout << "   |_|  \\___|  \\__,_| |_| |_| |_|   |_|  |_|  \\__,_| /___|  \\___| |_|    |___/" << endl;
+	cout << "   |_|  \\___|  \\__,_| |_| |_| |_|   |_|  |_|  \\__,_| /___|  \\___| |_|    |___/" << endl << endl;
 
-	cout << endl;
 	cout << "1. Play" << endl;
 	cout << "2. Rules" << endl;
 	cout << "3. Information" << endl;
@@ -127,7 +209,7 @@ void goback() {
 			cout << "Yes/No" << endl;
 			cin >> choice;
 			if (choice == "yes" or choice == "Yes")
-			{	
+			{
 				i = false;
 			}
 			else if (choice == "No" or choice == "no")

@@ -8,15 +8,15 @@ const char WIDTH = 8, HEIGHT = 8;
 Player player{ 1, 1, char(248) };
 char action;
 
-unsigned char maze1[WIDTH][HEIGHT] = {
-    unsigned char(254), unsigned char(254), unsigned char(254), unsigned char(254), unsigned char(254), unsigned char(254),unsigned char(254), unsigned char(254),
-    unsigned char(254), ' ', ' ', '#', ' ', ' ',' ', unsigned char(254),
-    unsigned char(254), unsigned char(254), ' ', unsigned char(254), ' ', unsigned char(254),' ', unsigned char(254),
-    unsigned char(254), ' ', ' ', unsigned char(254), unsigned char(254), unsigned char(254),' ', unsigned char(254),
-    unsigned char(254), ' ', unsigned char(254), unsigned char(254), unsigned char(254), ' ',' ', unsigned char(254),
-    unsigned char(254), ' ', unsigned char(254), ' ', ' ', ' ',unsigned char(254), unsigned char(254),
-    unsigned char(254), ' ', ' ', ' ', unsigned char(254), ' ',' ', unsigned char(254),
-    unsigned char(254), unsigned char(254), unsigned char(254), unsigned char(254), unsigned char(254), unsigned char(254),' ', unsigned char(254),
+ char maze1[WIDTH][HEIGHT] = {
+     char(254),  char(254),  char(254),  char(254),  char(254),  char(254), char(254),  char(254),
+     char(254), ' ', ' ', '#', ' ', ' ',' ',  char(254),
+     char(254),  char(254), ' ',  char(254), ' ',  char(254),' ',  char(254),
+     char(254), ' ', ' ',  char(254),  char(254),  char(254),' ',  char(254),
+     char(254), ' ',  char(254),  char(254),  char(254), ' ',' ',  char(254),
+     char(254), ' ',  char(254), ' ', ' ', ' ', char(254),  char(254),
+     char(254), ' ', ' ', ' ',  char(254), ' ',' ',  char(254),
+     char(254),  char(254),  char(254),  char(254),  char(254),  char(254),' ',  char(254),
 };
 
 unsigned char currentMaze[WIDTH][HEIGHT];
@@ -38,7 +38,7 @@ void Maze::updateMap()
     }
     if (currentMaze[player.x][player.y] == currentMaze[1][3]) {
         system("CLS");
-        cout << "You lost!" "\n";
+        cout << "You lose!" "\n";
         player.x = 1;
         player.y = 1;
         goback();

@@ -4,6 +4,8 @@ void info();
 void rules();
 void goback();
 void options();
+void gameOptions();
+void gameOptionsMenu();
 
 #define KEY_UP 72
 #define KEY_DOWN 80
