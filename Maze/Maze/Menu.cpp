@@ -42,6 +42,7 @@ void options() {
 			}
 
 			else if (counter == 2) {
+				counter = 1;
 				system("CLS");
 				rules();
 				goback();
@@ -49,6 +50,7 @@ void options() {
 			}
 
 			else if (counter == 3) {
+				counter = 1;
 				system("CLS");
 				info();
 				goback();
@@ -56,6 +58,7 @@ void options() {
 			}
 
 			else if (counter == 4) {
+				counter = 1;
 				system("CLS");
 				cout << "Exited the program successfully." << endl;
 				exit(0);
@@ -104,6 +107,7 @@ void gameOptions() {
 			}
 
 			else if (counter == 2) {
+				counter = 1;
 				system("CLS");
 				rules();
 				goback();
@@ -111,6 +115,7 @@ void gameOptions() {
 			}
 
 			else if (counter == 3) {
+				counter = 1;
 				system("CLS");
 				reference.movement();
 				goback();
@@ -119,6 +124,7 @@ void gameOptions() {
 			}
 
 			else if (counter == 4) {
+				counter = 1;
 				system("CLS");
 				menu();
 				options();
