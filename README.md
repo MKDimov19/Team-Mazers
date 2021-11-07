@@ -1,11 +1,21 @@
-# Hello, we are team Mazers
+# Hello, we are Team Mazers!
 
-## Contributors 🐱‍💻
+<img src="Pictures/mrtvdd.png" width="450px">
 
-- Maksimiliyan Dimov *<MKDimov19@codingburgas.bg>* - Scrum Trainer
+## Description 📝
+We are Team Mazers. The task is to create a C++ program based on a maze game. An essential is using dynamic arrays.
 
-- Georgi Trendafilov *<GSTrendafilov19@codingburgas.bg>* - Front-end Developer
+## Contributors 🧔
 
-- Georgi Hrisimov *<GKHrisimov19@codingburgas.bg>* - Back-End Developer
+- Maksimiliyan Dimov 10 <sup>A</sup> *<MKDimov19@codingburgas.bg>* - Scrum Trainer
 
-- Georgi Ivanov *<GVIvanov19@codingburgas.bg>* - QA Engineer
+- Georgi Trendafilov 10 <sup>G</sup> *<GSTrendafilov19@codingburgas.bg>* - Front-end Developer
+
+- Georgi Hrisimov 10 <sup>V</sup> *<GKHrisimov19@codingburgas.bg>* - Back-End Developer
+
+- Georgi Ivanov 10 <sup>B</sup> *<GVIvanov19@codingburgas.bg>* - QA Engineer
+
+## Links 🔗
+
+* [Presentation]
+* [Documentation]
