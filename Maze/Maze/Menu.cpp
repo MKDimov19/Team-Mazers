@@ -7,7 +7,7 @@
 using namespace std;
 int counter = 1;
 
-void options() {	
+void options() {
 	cout << endl;
 	cout << "Current selection " << counter << endl;
 	char key;
@@ -175,30 +175,35 @@ void goback() {
 		menu();
 		options();
 	}
-
 	else if (choice == "No" or choice == "no") {
 		cout << "You go there anyway!" << endl;
 		Sleep(1000);
 		menu();
 		options();
 	}
-
 	else {
 		string save;
-		for (bool i = 1; i;) {
+		for (bool i = 1; i;)
+		{
 			system("CLS");
 			cout << "Incorrect input" << endl;
 			cout << "Do you want to return to the menu?" << endl;
 			cout << "Yes/No" << endl;
 			cin >> choice;
-			if (choice == "yes" or choice == "Yes") {
-				i = false;
+			if (choice == "yes" or choice == "Yes")
+			{
+				menu();
+				options();
 			}
-			else if (choice == "No" or choice == "no") {
-				i = false;
+			else if (choice == "No" or choice == "no")
+			{
 				save = choice;
+				if (save == "No" or save == "no") cout << "You go there anyway!" << endl;
+				Sleep(1000);
+				menu();
+				options();
+
 			}
 		}
-		if (save == "No" or save == "no") cout << "You go there anyway!" << endl;
 	}
 }
