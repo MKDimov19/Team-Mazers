@@ -7,15 +7,17 @@
 using namespace std;
 int counter = 1;
 
-void options() {
+void options() 
+{
 	cout << endl;
 	cout << "Current selection " << counter << endl;
 	char key;
-	for (int i = 0;;) {
-
+	for (int i = 0;;) 
+	{
 		key = _getch();
 
-		if (key == KEY_UP && (counter >= 2 && counter <= 4)) {
+		if (key == KEY_UP && (counter >= 2 && counter <= 4)) 
+		{
 			system("CLS");
 			menu();
 			counter--;
@@ -23,7 +25,8 @@ void options() {
 			cout << "Current selection " << counter << endl;
 		}
 
-		if (key == KEY_DOWN && (counter >= 1 && counter <= 3)) {
+		if (key == KEY_DOWN && (counter >= 1 && counter <= 3)) 
+		{
 			system("CLS");
 			menu();
 			counter++;
@@ -31,14 +34,17 @@ void options() {
 			cout << "Current selection " << counter << endl;
 		}
 
-		if (key == '\r') {
-			if (counter == 1) {
+		if (key == '\r') 
+		{
+			if (counter == 1) 
+			{
 				system("CLS");
 				gameOptions();
 				break;
 			}
 
-			else if (counter == 2) {
+			else if (counter == 2) 
+			{
 				counter = 1;
 				system("CLS");
 				rules();
@@ -46,7 +52,8 @@ void options() {
 				break;
 			}
 
-			else if (counter == 3) {
+			else if (counter == 3) 
+			{
 				counter = 1;
 				system("CLS");
 				info();
@@ -54,7 +61,8 @@ void options() {
 				break;
 			}
 
-			else if (counter == 4) {
+			else if (counter == 4) 
+			{
 				counter = 1;
 				system("CLS");
 				cout << "Exited the program successfully." << endl;
@@ -64,17 +72,19 @@ void options() {
 	}
 }
 
-void gameOptions() {
+void gameOptions() 
+{
 	gameOptionsMenu();
 	Maze reference;
 	cout << endl;
 	cout << "Current selection " << counter << endl;
 	char key;
-	for (int i = 0;;) {
-
+	for (int i = 0;;) 
+	{
 		key = _getch();
 
-		if (key == KEY_UP && (counter >= 2 && counter <= 4)) {
+		if (key == KEY_UP && (counter >= 2 && counter <= 4)) 
+		{
 			system("CLS");
 			gameOptionsMenu();
 			counter--;
@@ -82,7 +92,8 @@ void gameOptions() {
 			cout << "Current selection " << counter << endl;
 		}
 
-		if (key == KEY_DOWN && (counter >= 1 && counter <= 3)) {
+		if (key == KEY_DOWN && (counter >= 1 && counter <= 3)) 
+		{
 			system("CLS");
 			gameOptionsMenu();
 			counter++;
@@ -90,14 +101,17 @@ void gameOptions() {
 			cout << "Current selection " << counter << endl;
 		}
 
-		if (key == '\r') {
-			if (counter == 1) {
+		if (key == '\r') 
+		{
+			if (counter == 1) 
+			{
 				system("CLS");
 				gameOptions();
 				break;
 			}
 
-			else if (counter == 2) {
+			else if (counter == 2) 
+			{
 				counter = 1;
 				system("CLS");
 				rules();
@@ -105,7 +119,8 @@ void gameOptions() {
 				break;
 			}
 
-			else if (counter == 3) {
+			else if (counter == 3) 
+			{
 				counter = 1;
 				system("CLS");
 				reference.movement();
@@ -114,7 +129,8 @@ void gameOptions() {
 				break;
 			}
 
-			else if (counter == 4) {
+			else if (counter == 4) 
+			{
 				counter = 1;
 				system("CLS");
 				menu();
@@ -125,7 +141,8 @@ void gameOptions() {
 
 }
 
-void gameOptionsMenu() {
+void gameOptionsMenu() 
+{
 	system("CLS");
 	cout << "Game options" << endl << endl;
 	cout << "1. Levels" << endl;
@@ -136,7 +153,8 @@ void gameOptionsMenu() {
 }
 
 
-void menu() {
+void menu() 
+{
 	system("CLS");
 	cout << " _______                             __  __                                   " << endl;
 	cout << "|__   __|                           |  \\/  |                                  " << endl;
@@ -152,7 +170,8 @@ void menu() {
 	cout << "You can navigate using the arrow keys" << endl;
 }
 
-void info() {
+void info() 
+{
 	system("CLS");
 	cout << "Maksimiliyan Dimov - Scrum Trainer" << endl;
 	cout << "     Georgi Ivanov - Quality Assurance Engineer" << endl;
@@ -161,7 +180,8 @@ void info() {
 	cout << endl;
 }
 
-void rules() {
+void rules() 
+{
 	cout << "Rules" << endl;
 }
 
@@ -170,18 +190,22 @@ void goback() {
 	cout << "Do you want to return to the menu?" << endl;
 	cout << "Yes/No" << endl;
 	cin >> choice;
-	if (choice == "yes" or choice == "Yes") {
+
+	if (choice == "yes" or choice == "Yes")
+	{
 		system("CLS");
 		menu();
 		options();
 	}
-	else if (choice == "No" or choice == "no") {
+	else if (choice == "No" or choice == "no") 
+	{
 		cout << "You go there anyway!" << endl;
 		Sleep(1000);
 		menu();
 		options();
 	}
-	else {
+	else 
+	{
 		string save;
 		for (bool i = 1; i;)
 		{
