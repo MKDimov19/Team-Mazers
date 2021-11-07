@@ -19,3 +19,15 @@ We are Team Mazers. The task is to create a C++ program based on a maze game. An
 
 * [Presentation]
 * [Documentation]
+
+## Screenshots 📷
+
+Menu
+
+<img src="Pictures/Screenshot_2.png" width="450px">
+
+
+
+Tutorial
+
+<img src="Pictures/Screenshot_1.png" width="450px">
