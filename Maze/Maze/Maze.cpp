@@ -1,7 +1,7 @@
 #include <iostream>
 #include <conio.h>
-#include "Menu.h"
-#include "Maze.h"
+#include "menu.h"
+#include "maze.h"
 using namespace std;
 
 const char WIDTH = 8, HEIGHT = 8;

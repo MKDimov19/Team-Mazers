@@ -1,18 +1,18 @@
 #include <iostream>
 #include <conio.h>
 #include <windows.h>
-#include "Menu.h"
-#include "Maze.h"
+#include "menu.h"
+#include "maze.h"
 
 using namespace std;
-
 int counter = 1;
+
 void options() {	
 	cout << endl;
 	cout << "Current selection " << counter << endl;
 	char key;
-	for (int i = 0;;)
-	{
+	for (int i = 0;;) {
+
 		key = _getch();
 
 		if (key == KEY_UP && (counter >= 2 && counter <= 4)) {
@@ -31,13 +31,10 @@ void options() {
 			cout << "Current selection " << counter << endl;
 		}
 
-
-
 		if (key == '\r') {
 			if (counter == 1) {
 				system("CLS");
 				gameOptions();
-				//reference.movement();
 				break;
 			}
 
@@ -67,18 +64,14 @@ void options() {
 	}
 }
 
-//new
-
 void gameOptions() {
-
 	gameOptionsMenu();
-
 	Maze reference;
 	cout << endl;
 	cout << "Current selection " << counter << endl;
 	char key;
-	for (int i = 0;;)
-	{
+	for (int i = 0;;) {
+
 		key = _getch();
 
 		if (key == KEY_UP && (counter >= 2 && counter <= 4)) {
@@ -96,8 +89,6 @@ void gameOptions() {
 			cout << endl;
 			cout << "Current selection " << counter << endl;
 		}
-
-
 
 		if (key == '\r') {
 			if (counter == 1) {
@@ -137,7 +128,6 @@ void gameOptions() {
 void gameOptionsMenu() {
 	system("CLS");
 	cout << "Game options" << endl << endl;
-
 	cout << "1. Levels" << endl;
 	cout << "2. Random generated maze" << endl;
 	cout << "3. Tutorial" << endl;
@@ -179,37 +169,32 @@ void goback() {
 	string choice;
 	cout << "Do you want to return to the menu?" << endl;
 	cout << "Yes/No" << endl;
-
 	cin >> choice;
-	if (choice == "yes" or choice == "Yes")
-	{
+	if (choice == "yes" or choice == "Yes") {
 		system("CLS");
 		menu();
 		options();
 	}
-	else if (choice == "No" or choice == "no")
-	{
+
+	else if (choice == "No" or choice == "no") {
 		cout << "You go there anyway!" << endl;
 		Sleep(1000);
 		menu();
 		options();
 	}
-	else
-	{
+
+	else {
 		string save;
-		for (bool i = 1; i;)
-		{
+		for (bool i = 1; i;) {
 			system("CLS");
 			cout << "Incorrect input" << endl;
 			cout << "Do you want to return to the menu?" << endl;
 			cout << "Yes/No" << endl;
 			cin >> choice;
-			if (choice == "yes" or choice == "Yes")
-			{
+			if (choice == "yes" or choice == "Yes") {
 				i = false;
 			}
-			else if (choice == "No" or choice == "no")
-			{
+			else if (choice == "No" or choice == "no") {
 				i = false;
 				save = choice;
 			}

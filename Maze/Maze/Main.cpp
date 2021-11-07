@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
-#include "Menu.h"
-#include "Maze.h"
+#include "menu.h"
+#include "maze.h"
 
 using namespace std;
 
