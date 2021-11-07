@@ -9,6 +9,7 @@ int counter = 1;
 
 void options() 
 {
+	menu();
 	cout << endl;
 	cout << "Current selection " << counter << endl;
 	char key;
@@ -133,7 +134,6 @@ void gameOptions()
 			{
 				counter = 1;
 				system("CLS");
-				menu();
 				options();
 			}
 		}
@@ -144,7 +144,12 @@ void gameOptions()
 void gameOptionsMenu() 
 {
 	system("CLS");
-	cout << "Game options" << endl << endl;
+	cout << " ____                           ___         _   _" "\n";
+	cout << "/ ___|   __ _ _ __ ___   ___   / _ \\  _ __ | |_(_) ___  _ __  ___" "\n";
+	cout << "| |  _  / _` | '_ ` _ \\ / _ \\  | | | | '_ \\| __| |/ _ \\| '_ \\/ __|" "\n";
+	cout << "| |_| |  (_| | | | | | |  __/  | |_| | |_) | |_| | (_) | | | \\__ \\" "\n";
+	cout << "\\_____| \\__,_|_| |_| |_|\\___|  \\___/ | .__/ \\__|_|\\___/|_| |_|___/" "\n";
+	cout << "                                     |_|" "\n";
 	cout << "1. Levels" << endl;
 	cout << "2. Random generated maze" << endl;
 	cout << "3. Tutorial" << endl;
@@ -194,14 +199,12 @@ void goback() {
 	if (choice == "yes" or choice == "Yes")
 	{
 		system("CLS");
-		menu();
 		options();
 	}
 	else if (choice == "No" or choice == "no") 
 	{
 		cout << "You go there anyway!" << endl;
 		Sleep(1000);
-		menu();
 		options();
 	}
 	else 
@@ -216,7 +219,6 @@ void goback() {
 			cin >> choice;
 			if (choice == "yes" or choice == "Yes")
 			{
-				menu();
 				options();
 			}
 			else if (choice == "No" or choice == "no")
@@ -224,7 +226,6 @@ void goback() {
 				save = choice;
 				if (save == "No" or save == "no") cout << "You go there anyway!" << endl;
 				Sleep(1000);
-				menu();
 				options();
 
 			}

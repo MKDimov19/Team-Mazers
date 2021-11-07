@@ -2,10 +2,11 @@
 class Maze {
 public:
 	void movement();
-	void updateMap();
+	void updatemap();
 };
 
-struct Player {
+struct Player 
+{
 	int x;
 	int y;
 	char player;
