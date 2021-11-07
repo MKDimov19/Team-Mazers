@@ -154,10 +154,10 @@ void menu() {
 
 void info() {
 	system("CLS");
-	cout << "Georgi Trendafilov - front-end" << endl;
-	cout << "Georgi Ivanov - QA" << endl;
-	cout << "Maksimilian - scrum trainer" << endl;
-	cout << "Georgi Hrisimov - back-end" << endl;
+	cout << "Maksimiliyan Dimov - Scrum Trainer" << endl;
+	cout << "     Georgi Ivanov - Quality Assurance Engineer" << endl;
+	cout << "Georgi Trendafilov - Front-End Developer" << endl;
+	cout << "   Georgi Hrisimov - Back-End Developer" << endl;
 	cout << endl;
 }
 
