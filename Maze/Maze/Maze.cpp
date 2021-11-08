@@ -15,7 +15,7 @@ char action;
 char tutorialMaze[WIDTH][HEIGHT] =
 {
 	char(254),  char(254),  char(254),  char(254),  char(254),  char(254), char(254),  char(254),
-	char(254), ' ', ' ', '#', ' ', ' ',' ',  char(254),
+	char(254), ' ', ' ', 'x', ' ', ' ',' ',  char(254),
 	char(254),  char(254), ' ',  char(254), ' ',  char(254),' ',  char(254),
 	char(254), ' ', ' ',  char(254),  char(254),  char(254),' ',  char(254),
 	char(254), ' ',  char(254),  char(254),  char(254), ' ',' ',  char(254),
@@ -69,7 +69,7 @@ void Maze::updatemap()
 		goback();
 	}
 
-	cout << "\n" "# - Trap" "\n";
+	cout << "\n" "x - Trap" "\n";
 	cout << player.player << " - Your character" "\n";
 }
 
