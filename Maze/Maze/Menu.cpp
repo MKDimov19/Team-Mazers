@@ -77,6 +77,7 @@ void gameOptions()
 {
 	gameOptionsMenu();
 	Maze reference;
+	
 	cout << endl;
 	cout << "Current selection " << counter << endl;
 	char key;
@@ -144,7 +145,7 @@ void gameOptions()
 void gameLevels()
 {
 	gameLevelsMenu();
-	Maze reference;
+	Level1 game;
 	cout << endl;
 	cout << "Current selection " << counter << endl;
 	char key;
@@ -174,9 +175,12 @@ void gameLevels()
 		{
 			if (counter == 1)
 			{
+				counter = 1;
 				system("CLS");
-				cout << "Level 1" << endl << endl;
+				game.movement1();
 				goback();
+				counter = 1;
+				break;
 			}
 
 			else if (counter == 2)
