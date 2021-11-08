@@ -1,4 +1,4 @@
-      # Hello, we are Team Mazers!
+# Hello, we are Team Mazers!
 
 <img src="Pictures/mrtvdd.png" width="450px">
 
