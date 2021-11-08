@@ -24,7 +24,7 @@ void options()
 			counter--;
 			cout << endl;
 			cout << "Current selection " << counter << endl;
-		}
+		} 
 
 		if (key == KEY_DOWN && (counter >= 1 && counter <= 3))
 		{
@@ -187,6 +187,7 @@ void gameLevels()
 			{
 				system("CLS");
 				cout << "Level 2" << endl << endl;
+				counter = 1;
 				goback();
 			}
 
@@ -194,6 +195,7 @@ void gameLevels()
 			{
 				system("CLS");
 				cout << "Level 3" << endl << endl;
+				counter = 1;
 				goback();
 			}
 
