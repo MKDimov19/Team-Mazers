@@ -17,7 +17,7 @@ We are Team Mazers. The task is to create a C++ program based on a maze game. An
 
 ## Links 🔗
 
-* [Presentation]
+* [Presentation](https://codingburgas-my.sharepoint.com/:p:/g/personal/mkdimov19_codingburgas_bg/EeHb7y2VZSpMnF44fvzgPfsBF2JEzJ1KqmRy9NLo_y5CVg?e=fQipz9)
 * [Documentation](https://codingburgas-my.sharepoint.com/:w:/g/personal/mkdimov19_codingburgas_bg/EUJeRP2sSExPqqMEy0ubuiQB16rrfG9P-n-2nu_2p4k3uA?e=jThPbL)
 * [QA_Documentation](https://codingburgas-my.sharepoint.com/:x:/g/personal/mkdimov19_codingburgas_bg/EQlULJr4gO5CmFOqBPDl1o4BR0I8nLmiHRc2o28-MOpjjg?e=3zP9cN)
 
