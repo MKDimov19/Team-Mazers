@@ -1,4 +1,4 @@
-# Hello, we are Team Mazers!
+      # Hello, we are Team Mazers!
 
 <img src="Pictures/mrtvdd.png" width="450px">
 
@@ -9,9 +9,11 @@
 * [Links](#link)
 * [Screenshots](#scre)
 
+<a name="desc"></a>
 ## Description 📝
 We are Team Mazers. The task is to create a C++ program based on a maze game. An essential is using dynamic arrays.
 
+<a name="contr"></a>
 ## Contributors 🧔
 
 - Maksimiliyan Dimov 10 <sup>A</sup> *<MKDimov19@codingburgas.bg>* - Scrum Trainer
@@ -22,12 +24,14 @@ We are Team Mazers. The task is to create a C++ program based on a maze game. An
 
 - Georgi Ivanov 10 <sup>B</sup> *<GVIvanov19@codingburgas.bg>* - QA Engineer
 
+<a name="link"></a>
 ## Links 🔗
 
 * [Presentation](https://codingburgas-my.sharepoint.com/:p:/g/personal/mkdimov19_codingburgas_bg/EeHb7y2VZSpMnF44fvzgPfsBF2JEzJ1KqmRy9NLo_y5CVg?e=fQipz9)
 * [Documentation](https://codingburgas-my.sharepoint.com/:w:/g/personal/mkdimov19_codingburgas_bg/EUJeRP2sSExPqqMEy0ubuiQB16rrfG9P-n-2nu_2p4k3uA?e=jThPbL)
 * [QA_Documentation](https://codingburgas-my.sharepoint.com/:x:/g/personal/mkdimov19_codingburgas_bg/EQlULJr4gO5CmFOqBPDl1o4BR0I8nLmiHRc2o28-MOpjjg?e=3zP9cN)
 
+<a name="scre"></a>
 ## Screenshots 📷
 
 **Menu**
