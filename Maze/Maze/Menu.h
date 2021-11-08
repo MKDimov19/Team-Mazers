@@ -6,6 +6,8 @@ void goback();
 void options();
 void gameOptions();
 void gameOptionsMenu();
+void gameLevels();
+void gameLevelsMenu();
 
 #define KEY_UP 72
 #define KEY_DOWN 80

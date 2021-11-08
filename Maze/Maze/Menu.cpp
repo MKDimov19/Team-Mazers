@@ -7,17 +7,17 @@
 using namespace std;
 int counter = 1;
 
-void options() 
+void options()
 {
 	menu();
 	cout << endl;
 	cout << "Current selection " << counter << endl;
 	char key;
-	for (int i = 0;;) 
+	for (int i = 0;;)
 	{
 		key = _getch();
 
-		if (key == KEY_UP && (counter >= 2 && counter <= 4)) 
+		if (key == KEY_UP && (counter >= 2 && counter <= 4))
 		{
 			system("CLS");
 			menu();
@@ -26,7 +26,7 @@ void options()
 			cout << "Current selection " << counter << endl;
 		}
 
-		if (key == KEY_DOWN && (counter >= 1 && counter <= 3)) 
+		if (key == KEY_DOWN && (counter >= 1 && counter <= 3))
 		{
 			system("CLS");
 			menu();
@@ -35,16 +35,16 @@ void options()
 			cout << "Current selection " << counter << endl;
 		}
 
-		if (key == '\r') 
+		if (key == '\r')
 		{
-			if (counter == 1) 
+			if (counter == 1)
 			{
 				system("CLS");
 				gameOptions();
 				break;
 			}
 
-			else if (counter == 2) 
+			else if (counter == 2)
 			{
 				counter = 1;
 				system("CLS");
@@ -53,7 +53,7 @@ void options()
 				break;
 			}
 
-			else if (counter == 3) 
+			else if (counter == 3)
 			{
 				counter = 1;
 				system("CLS");
@@ -62,7 +62,7 @@ void options()
 				break;
 			}
 
-			else if (counter == 4) 
+			else if (counter == 4)
 			{
 				counter = 1;
 				system("CLS");
@@ -73,18 +73,18 @@ void options()
 	}
 }
 
-void gameOptions() 
+void gameOptions()
 {
 	gameOptionsMenu();
 	Maze reference;
 	cout << endl;
 	cout << "Current selection " << counter << endl;
 	char key;
-	for (int i = 0;;) 
+	for (int i = 0;;)
 	{
 		key = _getch();
 
-		if (key == KEY_UP && (counter >= 2 && counter <= 4)) 
+		if (key == KEY_UP && (counter >= 2 && counter <= 4))
 		{
 			system("CLS");
 			gameOptionsMenu();
@@ -93,7 +93,7 @@ void gameOptions()
 			cout << "Current selection " << counter << endl;
 		}
 
-		if (key == KEY_DOWN && (counter >= 1 && counter <= 3)) 
+		if (key == KEY_DOWN && (counter >= 1 && counter <= 3))
 		{
 			system("CLS");
 			gameOptionsMenu();
@@ -102,16 +102,16 @@ void gameOptions()
 			cout << "Current selection " << counter << endl;
 		}
 
-		if (key == '\r') 
+		if (key == '\r')
 		{
-			if (counter == 1) 
+			if (counter == 1)
 			{
 				system("CLS");
-				gameOptions();
+				gameLevels();
 				break;
 			}
 
-			else if (counter == 2) 
+			else if (counter == 2)
 			{
 				counter = 1;
 				system("CLS");
@@ -120,7 +120,7 @@ void gameOptions()
 				break;
 			}
 
-			else if (counter == 3) 
+			else if (counter == 3)
 			{
 				counter = 1;
 				system("CLS");
@@ -130,7 +130,7 @@ void gameOptions()
 				break;
 			}
 
-			else if (counter == 4) 
+			else if (counter == 4)
 			{
 				counter = 1;
 				system("CLS");
@@ -141,7 +141,80 @@ void gameOptions()
 
 }
 
-void gameOptionsMenu() 
+void gameLevels()
+{
+	gameLevelsMenu();
+	Maze reference;
+	cout << endl;
+	cout << "Current selection " << counter << endl;
+	char key;
+	for (int i = 0;;)
+	{
+		key = _getch();
+
+		if (key == KEY_UP && (counter >= 2 && counter <= 4))
+		{
+			system("CLS");
+			gameLevelsMenu();
+			counter--;
+			cout << endl;
+			cout << "Current selection " << counter << endl;
+		}
+
+		if (key == KEY_DOWN && (counter >= 1 && counter <= 3))
+		{
+			system("CLS");
+			gameLevelsMenu();
+			counter++;
+			cout << endl;
+			cout << "Current selection " << counter << endl;
+		}
+
+		if (key == '\r')
+		{
+			if (counter == 1)
+			{
+				system("CLS");
+				cout << "Level 1" << endl << endl;
+				goback();
+			}
+
+			else if (counter == 2)
+			{
+				system("CLS");
+				cout << "Level 2" << endl << endl;
+				goback();
+			}
+
+			else if (counter == 3)
+			{
+				system("CLS");
+				cout << "Level 3" << endl << endl;
+				goback();
+			}
+
+			else if (counter == 4)
+			{
+				counter = 1;
+				system("CLS");
+				options();
+			}
+		}
+	}
+}
+
+void gameLevelsMenu()
+{
+	system("CLS");
+
+	cout << "1. Level 1" << endl;
+	cout << "2. Level 2" << endl;
+	cout << "3. Level 3" << endl;
+	cout << "4. Go back to the menu" << endl << endl;
+	cout << "You can navigate using the arrow keys" << endl;
+}
+
+void gameOptionsMenu()
 {
 	system("CLS");
 	cout << "  ____                           ___         _   _" "\n";
@@ -158,7 +231,7 @@ void gameOptionsMenu()
 }
 
 
-void menu() 
+void menu()
 {
 	system("CLS");
 	cout << " _______                             __  __                                   " << endl;
@@ -175,7 +248,7 @@ void menu()
 	cout << "You can navigate using the arrow keys" << endl;
 }
 
-void info() 
+void info()
 {
 	system("CLS");
 	cout << "Maksimiliyan Dimov - Scrum Trainer" << endl;
@@ -185,7 +258,7 @@ void info()
 	cout << endl;
 }
 
-void rules() 
+void rules()
 {
 	cout << "Rules" << endl;
 }
@@ -201,13 +274,13 @@ void goback() {
 		system("CLS");
 		options();
 	}
-	else if (choice == "No" or choice == "no") 
+	else if (choice == "No" or choice == "no")
 	{
 		cout << "You go there anyway!" << endl;
 		Sleep(1000);
 		options();
 	}
-	else 
+	else
 	{
 		string save;
 		for (bool i = 1; i;)
