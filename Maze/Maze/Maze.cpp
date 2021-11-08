@@ -55,7 +55,12 @@ void Maze::updatemap()
 	if (currentMaze[player.x][player.y] == currentMaze[1][3])
 	{
 		system("CLS");
-		cout << "You lose!" "\n";
+		cout << " __   __            _                _" "\n";
+		cout << " \\ \\ / /__  _   _  | | ___  ___  ___| |" "\n";
+		cout << "  \\ V / _ \\| | | | | |/ _ \\/ __|/ _ \\ |" "\n";
+		cout << "   | | (_) | |_| | | | (_) \\__ \\  __/_|" "\n";
+		cout << "   |_|\\___/ \\__,_| |_|\\___/|___/\\___(_)" "\n";
+		cout << "\n";
 		player.x = 1;
 		player.y = 1;
 		goback();
@@ -63,7 +68,12 @@ void Maze::updatemap()
 	if (currentMaze[player.x][player.y] == currentMaze[7][6])
 	{
 		system("CLS");
-		cout << "You win!" "\n";
+		cout << " __   __                     _       _" "\n";
+		cout << " \\ \\ / /__  _   _  __      _(_)_ __ | |" "\n";
+		cout << "  \\ V / _ \\| | | | \\ \\ /\\ / / | '_ \\| |" "\n";
+		cout << "   | | (_) | |_| |  \\ V  V /| | | | |_|" "\n";
+		cout << "   |_|\\___/ \\__,_|   \\_/\\_/ |_|_| |_(_)" "\n";
+		cout << "\n";
 		player.x = 1;
 		player.y = 1;
 		goback();
@@ -161,7 +171,12 @@ void Level1::updatemap1()
 	if (currentMaze1[player.x][player.y] == currentMaze1[2][5] or currentMaze1[player.x][player.y] == currentMaze1[7][8])
 	{
 		system("CLS");
-		cout << "You lose!" "\n";
+		cout << " __   __            _                _" "\n";
+		cout << " \\ \\ / /__  _   _  | | ___  ___  ___| |" "\n";
+		cout << "  \\ V / _ \\| | | | | |/ _ \\/ __|/ _ \\ |" "\n";
+		cout << "   | | (_) | |_| | | | (_) \\__ \\  __/_|" "\n";
+		cout << "   |_|\\___/ \\__,_| |_|\\___/|___/\\___(_)" "\n";
+		cout << "\n";
 		player.x = 1;
 		player.y = 1;
 		goback();
@@ -169,7 +184,12 @@ void Level1::updatemap1()
 	if (currentMaze1[player.x][player.y] == currentMaze1[9][8])
 	{
 		system("CLS");
-		cout << "You win!" "\n";
+		cout << " __   __                     _       _" "\n";
+		cout << " \\ \\ / /__  _   _  __      _(_)_ __ | |" "\n";
+		cout << "  \\ V / _ \\| | | | \\ \\ /\\ / / | '_ \\| |" "\n";
+		cout << "   | | (_) | |_| |  \\ V  V /| | | | |_|" "\n";
+		cout << "   |_|\\___/ \\__,_|   \\_/\\_/ |_|_| |_(_)" "\n";
+		cout << "\n";
 		player.x = 1;
 		player.y = 1;
 		goback();
@@ -279,7 +299,12 @@ void Level2::updatemap2()
 	if (currentMaze2[player.x][player.y] == currentMaze2[13][4] or currentMaze2[player.x][player.y] == currentMaze2[9][7] or currentMaze2[player.x][player.y] == currentMaze2[6][13] or currentMaze2[player.x][player.y] == currentMaze2[11][16])
 	{
 		system("CLS");
-		cout << "You lose!" "\n";
+		cout << " __   __            _                _" "\n";
+		cout << " \\ \\ / /__  _   _  | | ___  ___  ___| |" "\n";
+		cout << "  \\ V / _ \\| | | | | |/ _ \\/ __|/ _ \\ |" "\n";
+		cout << "   | | (_) | |_| | | | (_) \\__ \\  __/_|" "\n";
+		cout << "   |_|\\___/ \\__,_| |_|\\___/|___/\\___(_)" "\n";
+		cout << "\n";
 		player.x = 1;
 		player.y = 1;
 		goback();
@@ -287,7 +312,12 @@ void Level2::updatemap2()
 	if (currentMaze2[player.x][player.y] == currentMaze2[19][18])
 	{
 		system("CLS");
-		cout << "You win!" "\n";
+		cout << " __   __                     _       _" "\n";
+		cout << " \\ \\ / /__  _   _  __      _(_)_ __ | |" "\n";
+		cout << "  \\ V / _ \\| | | | \\ \\ /\\ / / | '_ \\| |" "\n";
+		cout << "   | | (_) | |_| |  \\ V  V /| | | | |_|" "\n";
+		cout << "   |_|\\___/ \\__,_|   \\_/\\_/ |_|_| |_(_)" "\n";
+		cout << "\n";
 		player.x = 1;
 		player.y = 1;
 		goback();
@@ -404,7 +434,12 @@ void Level3::updatemap3()
 	if (currentMaze3[player.x][player.y] == currentMaze3[7][2] or currentMaze3[player.x][player.y] == currentMaze3[5][7] or currentMaze3[player.x][player.y] == currentMaze3[7][25] or currentMaze3[player.x][player.y] == currentMaze3[13][9] or currentMaze3[player.x][player.y] == currentMaze3[28][8] or currentMaze3[player.x][player.y] == currentMaze3[15][21] or currentMaze3[player.x][player.y] == currentMaze3[19][27] or currentMaze3[player.x][player.y] == currentMaze3[21][11] or currentMaze3[player.x][player.y] == currentMaze3[26][8])
 	{
 		system("CLS");
-		cout << "You lose!" "\n";
+		cout << " __   __            _                _" "\n";
+		cout << " \\ \\ / /__  _   _  | | ___  ___  ___| |" "\n";
+		cout << "  \\ V / _ \\| | | | | |/ _ \\/ __|/ _ \\ |" "\n";
+		cout << "   | | (_) | |_| | | | (_) \\__ \\  __/_|" "\n";
+		cout << "   |_|\\___/ \\__,_| |_|\\___/|___/\\___(_)" "\n";
+		cout << "\n";
 		player.x = 1;
 		player.y = 1;
 		goback();
@@ -412,7 +447,12 @@ void Level3::updatemap3()
 	if (currentMaze3[player.x][player.y] == currentMaze3[29][28])
 	{
 		system("CLS");
-		cout << "You win!" "\n";
+		cout << " __   __                     _       _" "\n";
+		cout << " \\ \\ / /__  _   _  __      _(_)_ __ | |" "\n";
+		cout << "  \\ V / _ \\| | | | \\ \\ /\\ / / | '_ \\| |" "\n";
+		cout << "   | | (_) | |_| |  \\ V  V /| | | | |_|" "\n";
+		cout << "   |_|\\___/ \\__,_|   \\_/\\_/ |_|_| |_(_)" "\n";
+		cout << "\n";
 		player.x = 1;
 		player.y = 1;
 		goback();

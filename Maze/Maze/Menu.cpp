@@ -116,7 +116,7 @@ void gameOptions()
 			{
 				counter = 1;
 				system("CLS");
-				rules();
+				cout << "In development!" "\n" "\n";
 				goback();
 				break;
 			}
@@ -258,7 +258,7 @@ void menu()
 
 	cout << "1. Play" << endl;
 	cout << "2. Rules" << endl;
-	cout << "3. Information" << endl;
+	cout << "3. Developers" << endl;
 	cout << "4. Exit" << endl << endl;
 	cout << "You can navigate using the arrow keys" << endl;
 }
