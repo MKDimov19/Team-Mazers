@@ -2,6 +2,13 @@
 
 <img src="Pictures/mrtvdd.png" width="450px">
 
+## Table of Contents
+
+* [Description](#desc) 
+* [Contributors](#contr)
+* [Links](#link)
+* [Screenshots](#scre)
+
 ## Description 📝
 We are Team Mazers. The task is to create a C++ program based on a maze game. An essential is using dynamic arrays.
 
