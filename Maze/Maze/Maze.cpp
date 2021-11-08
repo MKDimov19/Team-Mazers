@@ -127,19 +127,14 @@ char level1[WIDTH_L1][HEIGHT_L1] =
 	char(254),  ' ',  ' ',  ' ',  ' ',  char(254), ' ',  char(254),  ' ',  char(254),
 	char(254),  char(254),  char(254),  ' ',  ' ',  ' ', ' ',  ' ',  ' ',  char(254),
 	char(254),  ' ',  ' ',  ' ',  char(254),  char(254), ' ',  ' ',  ' ',  char(254),
-	char(254),  char(254),  ' ',  char(254),  ' ',  ' ', ' ',  char(254),  char(254),  char(254),
+	char(254),  char(254),  ' ',  char(254),  ' ',  ' ', ' ',  char(254),  'x',  char(254),
 	char(254),  ' ',  ' ',  ' ',  ' ',  char(254), ' ',  ' ',  ' ',  char(254),
 	char(254),  char(254),  char(254),  char(254),  char(254),  char(254), char(254),  char(254),  ' ',  char(254),
 };
 
 void Level1::updatemap1()
 {
-	cout << " _____      _             _       _" "\n";
-	cout << "|_   _|   _| |_ ___  _ __(_) __ _| |" "\n";
-	cout << "  | || | | | __/ _ \\| '__| |/ _` | |" "\n";
-	cout << "  | || |_| | || (_) | |  | | (_| | |" "\n";
-	cout << "  |_| \\__,_|\\__\\___/|_|  |_|\\__,_|_|" "\n";
-	cout << "\n";
+	cout << "Level 1" << endl << endl;
 
 	for (int i = 0; i < HEIGHT_L1; i++)
 	{
@@ -158,7 +153,7 @@ void Level1::updatemap1()
 		}
 		cout << endl;
 	}
-	if (currentMaze1[player.x][player.y] == currentMaze1[2][5])
+	if (currentMaze1[player.x][player.y] == currentMaze1[2][5] or currentMaze1[player.x][player.y] == currentMaze1[7][8])
 	{
 		system("CLS");
 		cout << "You lose!" "\n";
@@ -175,7 +170,7 @@ void Level1::updatemap1()
 		goback();
 	}
 
-	cout << "\n" "# - Trap" "\n";
+	cout << "\n" "x - Trap" "\n";
 	cout << player.player << " - Your character" "\n";
 }
 
