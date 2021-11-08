@@ -134,7 +134,12 @@ char level1[WIDTH_L1][HEIGHT_L1] =
 
 void Level1::updatemap1()
 {
-	cout << "Level 1" << endl << endl;
+	cout << "  _                   _   _" "\n";
+	cout << " | |    _____   _____| | / |" "\n";
+	cout << " | |   / _ \\ \\ / / _ \\ | | |" "\n";
+	cout << " | |__|  __/\\ V /  __/ | | |" "\n";
+	cout << " |_____\\___| \\_/ \\___|_| |_|" "\n";
+	cout << "\n";
 
 	for (int i = 0; i < HEIGHT_L1; i++)
 	{
