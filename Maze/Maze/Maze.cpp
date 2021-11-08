@@ -246,8 +246,8 @@ char level2[WIDTH_L2][HEIGHT_L2] =
 	char(254),  ' ',  char(254),  char(254),  ' ',  ' ', ' ',  ' ',  char(254),  ' ',' ',  char(254),  char(254),  char(254),  char(254),  char(254), ' ',  ' ',  ' ',  char(254),
 	char(254),  ' ',  ' ',  ' ',  ' ',  char(254), char(254),  ' ',  ' ', ' ',' ', ' ',  ' ',  char(254),  ' ',  ' ',' ',  char(254),  char(254),  char(254),
 	char(254),  ' ',  ' ',  char(254),  char(254),  char(254), char(254),  ' ',  ' ',  char(254),char(254),  ' ',  ' ',  char(254),  ' ',  ' ', ' ',  ' ',  ' ',  char(254),
-	char(254),  char(254),  ' ', ' ', ' ',  ' ', char(254), ' ',  ' ',  char(254),' ', ' ',  ' ',  char(254),  ' ',  char(254), char(254),  char(254),  'G',  char(254),
-	char(254),  char(254),  char(254),  char(254),  char(254),  char(254), char(254),  char(254),  char(254),  char(254),char(254),  char(254),  char(254),  char(254),  char(254),  char(254), char(254),  char(254),  char(254),  char(254),
+	char(254),  char(254),  ' ', ' ', ' ',  ' ', char(254), ' ',  ' ',  char(254),' ', ' ',  ' ',  char(254),  ' ',  char(254), char(254),  char(254),  ' ',  char(254),
+	char(254),  char(254),  char(254),  char(254),  char(254),  char(254), char(254),  char(254),  char(254),  char(254), char(254),  char(254),  char(254),  char(254),  char(254),  char(254), char(254),  char(254),  ' ',  char(254),
 };
 
 void Level2::updatemap2()
@@ -284,7 +284,7 @@ void Level2::updatemap2()
 		player.y = 1;
 		goback();
 	}
-	if (currentMaze2[player.x][player.y] == currentMaze2[18][18])
+	if (currentMaze2[player.x][player.y] == currentMaze2[19][18])
 	{
 		system("CLS");
 		cout << "You win!" "\n";
@@ -338,4 +338,127 @@ void Level2::movement2()
 	}
 }
 
+const char WIDTH_L3 = 30, HEIGHT_L3 = 30;
+unsigned char currentMaze3[WIDTH_L3][HEIGHT_L3];
 
+char level3[WIDTH_L3][HEIGHT_L3] =
+{
+	char(254), char(254), char(254), char(254), char(254), char(254), char(254), char(254), char(254),  char(254), char(254), char(254), char(254), char(254), char(254), char(254), char(254), char(254), char(254), char(254), char(254), char(254), char(254), char(254), char(254), char(254), char(254), char(254), char(254), char(254),
+	char(254), ' ', ' ', char(254), ' ', ' ', ' ', char(254), char(254),  char(254), ' ', ' ', ' ', ' ', char(254), char(254), ' ', ' ', char(254), ' ', ' ', ' ', char(254), char(254), ' ', char(254), ' ', ' ', ' ', char(254),
+	char(254), ' ', ' ', char(254), char(254), ' ', ' ', char(254), ' ',  ' ', ' ', char(254), ' ', ' ', char(254), ' ', ' ', ' ', char(254), char(254), char(254), ' ', char(254), ' ', ' ', char(254), ' ', char(254), ' ', char(254),
+	char(254), ' ', ' ', ' ', ' ', ' ', ' ', char(254), ' ',  ' ', char(254), ' ', ' ', ' ', ' ', ' ', ' ', ' ', char(254), ' ', ' ', ' ', ' ', ' ', ' ', char(254), ' ', char(254), ' ', char(254),
+	char(254), char(254), char(254), char(254), char(254), ' ', char(254), char(254), char(254), ' ', char(254), char(254), char(254), char(254), char(254), char(254), char(254), ' ', ' ', ' ', char(254), char(254), char(254), ' ', ' ', char(254), ' ', char(254), ' ', char(254),
+	char(254), ' ', char(254), ' ', ' ', ' ', ' ', 'x', ' ',  ' ', char(254), ' ', ' ', char(254), ' ', ' ', ' ', ' ', ' ', ' ', char(254), char(254), ' ', ' ', ' ', char(254), ' ', char(254), ' ', char(254),
+	char(254), ' ', char(254), ' ', ' ', char(254), ' ', ' ', char(254), ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', char(254), ' ', ' ', ' ', ' ', ' ', char(254), ' ', ' ', ' ', char(254), ' ', char(254),
+	char(254), ' ', 'x', ' ', ' ', char(254), ' ', ' ', char(254),  char(254), char(254), char(254), char(254), char(254), char(254), ' ', ' ', char(254), char(254), char(254), char(254), ' ', ' ', ' ', ' ', 'x', ' ', char(254), ' ', char(254),
+	char(254), ' ', char(254), ' ', ' ', char(254), ' ', ' ', ' ',  char(254), ' ', ' ', ' ', ' ', ' ', ' ', char(254), char(254), ' ', ' ', char(254), ' ', ' ', char(254), ' ', char(254), char(254), ' ', ' ', char(254),
+	char(254), ' ', char(254), char(254), ' ', ' ', ' ', ' ', ' ',  char(254), char(254), ' ', ' ', char(254), ' ', ' ', ' ', char(254), ' ', ' ', char(254), ' ', ' ', char(254), ' ', ' ', char(254), ' ', char(254), char(254),
+	char(254), ' ', ' ', char(254), char(254), ' ', ' ', ' ', ' ',  ' ', ' ', ' ', char(254), char(254), ' ', ' ', ' ', ' ', ' ', ' ', char(254), ' ', ' ', ' ', ' ', ' ', char(254), ' ', ' ', char(254),
+	char(254), ' ', ' ', char(254), char(254), ' ', ' ', char(254), ' ',  ' ', ' ', ' ', ' ', char(254), ' ', ' ', char(254), char(254), char(254), char(254), char(254), char(254), ' ', char(254), char(254), char(254), char(254), char(254), ' ', char(254),
+	char(254), ' ', ' ', char(254), char(254), ' ', ' ', char(254), ' ',  ' ', char(254), char(254), char(254), char(254), ' ', ' ', char(254), char(254), ' ', ' ', ' ', ' ', ' ', ' ', char(254), ' ', ' ', ' ', ' ', char(254),
+	char(254), ' ', ' ', ' ', ' ', ' ', ' ', char(254), ' ',  ' ', char(254), ' ', ' ', char(254), ' ', ' ', char(254), char(254), ' ', ' ', char(254), ' ', ' ', ' ', char(254), ' ', ' ', ' ', 'x', char(254),
+	char(254), char(254), char(254), ' ', ' ', ' ', ' ', char(254), ' ',  'x', char(254), ' ', ' ', char(254), char(254), char(254), char(254), ' ', ' ', char(254), char(254), char(254), ' ', ' ', char(254), char(254), char(254), ' ', ' ', char(254),
+	char(254), ' ', ' ', ' ', ' ', char(254), char(254), char(254), ' ',  ' ', char(254), ' ', ' ', char(254), ' ', ' ', char(254), ' ', ' ', ' ', ' ', 'x', ' ', ' ', char(254), ' ', ' ', ' ', ' ', char(254),
+	char(254), ' ', ' ', char(254), ' ', ' ', char(254), ' ', ' ', ' ', ' ', ' ', ' ', char(254), ' ', ' ', char(254), ' ', ' ', char(254), char(254), char(254), char(254), char(254), char(254), ' ', char(254), ' ', ' ', char(254),
+	char(254), ' ', ' ', char(254), ' ', ' ', ' ', ' ', ' ',  ' ', ' ', char(254), ' ', ' ', ' ', ' ', ' ', ' ', ' ', char(254), ' ', ' ', char(254), ' ', ' ', ' ', char(254), ' ', ' ', char(254),
+	char(254), ' ', ' ', char(254), char(254), char(254), char(254), char(254), ' ', ' ', ' ', char(254), ' ', ' ', ' ', char(254), ' ', ' ', ' ', char(254), ' ', ' ', char(254), ' ', char(254), ' ', ' ', ' ', ' ', char(254),
+	char(254), ' ', ' ', char(254), ' ', ' ', ' ', ' ', ' ',  ' ', ' ', char(254), ' ', ' ', char(254), char(254), ' ', ' ', ' ', char(254), ' ', ' ', ' ', ' ', char(254), char(254), char(254), 'x', ' ', char(254),
+	char(254), ' ', ' ', ' ', ' ', ' ', char(254), ' ', ' ',  ' ', ' ', ' ', ' ', ' ', char(254), char(254), ' ', ' ', ' ', char(254), char(254), ' ', ' ', ' ', ' ', ' ', ' ', ' ', char(254), char(254),
+	char(254), char(254), char(254), char(254), char(254), ' ', char(254), char(254), char(254),  char(254), char(254), 'x', ' ', ' ', ' ', char(254), ' ', ' ', ' ', char(254), ' ', ' ', char(254), char(254), char(254), char(254), ' ', ' ', char(254), char(254),
+	char(254), ' ', ' ', ' ', ' ', ' ', ' ', char(254), ' ',  ' ', ' ', ' ', ' ', char(254), ' ', ' ', ' ', ' ', ' ', char(254), ' ', ' ', char(254), char(254), char(254), char(254), ' ', ' ', char(254), char(254),
+	char(254), char(254), char(254), ' ', ' ', ' ', ' ', char(254), ' ',  ' ', ' ', ' ', ' ', char(254), ' ', ' ', char(254), ' ', ' ', char(254), char(254), char(254), char(254), ' ', ' ', ' ', ' ', ' ', char(254), char(254),
+	char(254), ' ', ' ', ' ', char(254), ' ', ' ', char(254), char(254),  char(254), char(254), ' ', ' ', char(254), ' ', ' ', char(254), ' ', ' ', char(254), ' ', ' ', char(254), char(254), char(254), char(254), char(254), ' ', ' ', char(254),
+	char(254), ' ', ' ', char(254), char(254), ' ', ' ', char(254), ' ',  ' ', ' ', ' ', ' ', char(254), ' ', ' ', char(254), ' ', ' ', char(254), ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', char(254),
+	char(254), ' ', ' ', ' ', char(254), ' ', ' ', char(254), 'x',  char(254), ' ', ' ', ' ', char(254), ' ', ' ', ' ', ' ', char(254), char(254), char(254), char(254), char(254), char(254), ' ', char(254), ' ', ' ', ' ', char(254),
+	char(254), ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',  char(254), ' ', char(254), ' ', char(254), char(254), char(254), char(254), char(254), char(254), ' ', ' ', ' ', ' ', ' ', ' ', char(254), char(254), char(254), ' ', char(254),
+	char(254), ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',  char(254), ' ', char(254), ' ', ' ', ' ', ' ', ' ', ' ', char(254), ' ', ' ', ' ', ' ', ' ', ' ', char(254), ' ', ' ', ' ', char(254),
+	char(254), char(254), char(254), char(254), char(254), char(254), char(254), char(254), char(254),  char(254), char(254), char(254), char(254), char(254), char(254), char(254), char(254), char(254), char(254), char(254), char(254), char(254), char(254), char(254), char(254), char(254), char(254), char(254), ' ', char(254),
+};
+
+void Level3::updatemap3()
+{
+	cout << "  _                   _   _____" "\n";
+	cout << " | |    _____   _____| | |___ /" "\n";
+	cout << " | |   / _ \\ \\ / / _ \\ |   |_ \\" "\n";
+	cout << " | |__|  __/\\ V /  __/ |  ___) |" "\n";
+	cout << " |_____\\___| \\_/ \\___|_| |____/" "\n";
+	cout << "\n";
+
+	for (int i = 0; i < HEIGHT_L3; i++)
+	{
+		for (int j = 0; j < WIDTH_L3; j++)
+		{
+			currentMaze3[j][i] = level3[j][i];
+		}
+	}
+	currentMaze3[player.x][player.y] = player.player;
+
+	for (int i = 0; i < HEIGHT_L3; i++)
+	{
+		for (int j = 0; j < WIDTH_L3; j++)
+		{
+			cout << currentMaze3[j][i] << " ";
+		}
+		cout << endl;
+	}
+	if (currentMaze3[player.x][player.y] == currentMaze3[7][2] or currentMaze3[player.x][player.y] == currentMaze3[5][7] or currentMaze3[player.x][player.y] == currentMaze3[7][25] or currentMaze3[player.x][player.y] == currentMaze3[13][9] or currentMaze3[player.x][player.y] == currentMaze3[28][8] or currentMaze3[player.x][player.y] == currentMaze3[15][21] or currentMaze3[player.x][player.y] == currentMaze3[19][27] or currentMaze3[player.x][player.y] == currentMaze3[21][11] or currentMaze3[player.x][player.y] == currentMaze3[26][8])
+	{
+		system("CLS");
+		cout << "You lose!" "\n";
+		player.x = 1;
+		player.y = 1;
+		goback();
+	}
+	if (currentMaze3[player.x][player.y] == currentMaze3[29][28])
+	{
+		system("CLS");
+		cout << "You win!" "\n";
+		player.x = 1;
+		player.y = 1;
+		goback();
+	}
+
+	cout << "\n" "x - Trap" "\n";
+	cout << player.player << " - Your character" "\n";
+}
+
+void Level3::movement3()
+{
+	for (int i = 0;;)
+	{
+		system("CLS");
+		Level3::updatemap3();
+		action = _getch();
+		switch (action)
+		{
+
+		case KEY_DOWN:
+			if (currentMaze3[player.x][player.y + 1] != unsigned char(254))
+			{
+				player.y++;
+			}
+			break;
+
+		case KEY_UP:
+			if (currentMaze3[player.x][player.y - 1] != unsigned char(254))
+			{
+				player.y--;
+			}
+			break;
+
+		case KEY_LEFT:
+			if (currentMaze3[player.x - 1][player.y] != unsigned char(254))
+			{
+				player.x--;
+			}
+			break;
+
+		case KEY_RIGHT:
+			if (currentMaze3[player.x + 1][player.y] != unsigned char(254))
+			{
+				player.x++;
+			}
+			break;
+		}
+	}
+}

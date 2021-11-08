@@ -147,6 +147,7 @@ void gameLevels()
 	gameLevelsMenu();
 	Level1 game;
 	Level2 game2;
+	Level3 game3;
 	cout << endl;
 	cout << "Current selection " << counter << endl;
 	char key;
@@ -176,7 +177,6 @@ void gameLevels()
 		{
 			if (counter == 1)
 			{
-				counter = 1;
 				system("CLS");
 				game.movement1();
 				goback();
@@ -196,10 +196,11 @@ void gameLevels()
 
 			else if (counter == 3)
 			{
-				system("CLS");
-				cout << "Level 3" << endl << endl;
 				counter = 1;
+				system("CLS");
+				game3.movement3();
 				goback();
+				
 			}
 
 			else if (counter == 4)
@@ -215,7 +216,12 @@ void gameLevels()
 void gameLevelsMenu()
 {
 	system("CLS");
-
+	cout << "  _                   _" "\n";
+	cout << " | |    _____   _____| |___" "\n";
+	cout << " | |   / _ \\ \\ / / _ \\ / __|" "\n";
+	cout << " | |__|  __/\\ V /  __/ \\__ \\" "\n";
+	cout << " |_____\\___| \\_/ \\___|_|___/" "\n";
+	cout << "\n";
 	cout << "1. Level 1" << endl;
 	cout << "2. Level 2" << endl;
 	cout << "3. Level 3" << endl;
