@@ -11,6 +11,18 @@ public:
 	void updatemap1();
 };
 
+class Level2 {
+public:
+	void movement2();
+	void updatemap2();
+};
+
+class Level3 {
+public:
+	void movement3();
+	void updatemap3();
+};
+
 struct Player 
 {
 	int x;

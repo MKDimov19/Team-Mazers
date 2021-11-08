@@ -146,6 +146,7 @@ void gameLevels()
 {
 	gameLevelsMenu();
 	Level1 game;
+	Level2 game2;
 	cout << endl;
 	cout << "Current selection " << counter << endl;
 	char key;
@@ -185,10 +186,12 @@ void gameLevels()
 
 			else if (counter == 2)
 			{
-				system("CLS");
-				cout << "Level 2" << endl << endl;
 				counter = 1;
+				system("CLS");
+				game2.movement2();
 				goback();
+				counter = 1;
+				break;
 			}
 
 			else if (counter == 3)
